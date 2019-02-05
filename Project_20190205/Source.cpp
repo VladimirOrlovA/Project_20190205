@@ -163,20 +163,17 @@ int main()
 //(K — параметр целого типа, являющийся одновременно входным и выходным).С помощью этой процедуры поменять порядок 
 //следования цифр на обратный для каждого из пяти данных целых чисел.
 
-
-void  DigitCountSum(int K, int& C, int& S)
+/* Home Work 7 8 9 10
+void  DigitCountSum(int K, int Kinv)
 {
-	C = 0;
-	S = 0;
+	int C = 0;
+	int S = 0;
 
 	while (K)
 	{
-		C++;
-		S += K % 10;
+		Kinv = K % 10;
 		K /= 10;
 	}
-
-
 }
 
 
@@ -193,4 +190,46 @@ int main()
 
 	system("pause");
 
+}*/
+
+
+bool  PerfectNumber(int n)
+{
+	int r=0, s=0;
+	
+	for (int i = 1; i < n; i++)
+	{
+
+		if (n % i == 0)
+		{
+			s += i;
+
+		}
+		
+	}
+	if (s == n) return true;
+	else return false;
 }
+
+
+int main()
+{
+	int a,b;
+
+		cin >> a>>b;
+		for (int i = a; i <= b; i++)
+		{
+			if (PerfectNumber(i) != 0)
+			{
+				cout << i << endl;
+			}
+		}
+
+		//cout << s << "  " << endl << endl;
+
+	system("pause");
+
+}
+
+
+
